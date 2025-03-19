@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOC Practicals</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f8f9fa;
+    }
+    .index {
+      background: #343a40;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 5px;
+    }
+    .index a {
+      color: #ffcc00;
+      margin: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .practical {
+      margin: 20px 0;
+      padding: 15px;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    }
+    pre {
+      background: #222;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+      white-space: pre-wrap;  /* ensures long lines wrap */
+      word-wrap: break-word;
+    }
+    .copy-btn {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>C++ Practical Codes</h2>
+  <div class="index">
+    <p><strong>Index:</strong></p>
+    <a href="#practical1">Practical 1</a> |
+    <a href="#practical2">Practical 2</a> |
+    <a href="#practical3">Practical 3</a> |
+    <a href="#practical4">Practical 4</a> |
+    <a href="#practical5">Practical 5</a> |
+    <a href="#practical6">Practical 6</a> |
+    <a href="#practical7">Practical 7</a> |
+    <a href="#practical8">Practical 8</a> |
+    <a href="#practical9">Practical 9</a>
+  </div>
+
+  <!-- Practical 1 -->
+  <div class="practical" id="practical1">
+    <h3>Practical 1</h3>
+    <pre><code>#practical1
+#include &lt;iostream&gt;
+using namespace std;
+
+int main(){
+    string str;
+    int q0 = 0, q1 = 1, q2 = 2, q3 = 3;
+    int current_state = q0;
+    char ch;
+    cout << "Enter the string\n" << endl;
+    cin >> str;
+    for (int i = 0; i < str.length(); ++i){
+        ch = str[i];
+        cout << "\n" << ch << " State " << current_state << endl;
+        if(current_state == q0 && ch == '1'){
+            current_state = q1;
+        }
+        else if(current_state == q1 && ch == '0'){
+            current_state = q0;
+        }
+        else if(current_state == q1 && ch == '1'){
+            current_state = q2;
+        }
+        else if(current_state == q2 && ch == '0'){
+            current_state = q0;
+        }
+        else if(current_state == q2 && ch == '1'){
+            current_state = q3;
+        }
+        else if(current_state == q3 && (ch == '0' || ch == '1')){
+            current_state = q3;
+        }
+    }
+    if(current_state == q3){
+        cout << "\n" << str << " is acceptable" << endl;
+    }
+    else{
+         cout << "\n" << str << " is not acceptable" << endl;
+    }
+    return 0;
+}</code></pre>
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+  </div>
+
+  <!-- Practical 2 -->
+  <div class="practical" id="practical2">
+    <h3>Practical 2</h3>
+    <pre><code>#practical 2
+#include &lt;iostream&gt;
+using namespace std;
+
+int main(){
+    string str;
+    int q0 = 0, q1 = 1, q2 = 2, q3 = 3;
+    int current_state = q0;
+    char ch;
+    cout << "Enter the string\n" << endl;
+    cin >> str;
+    for (int i = 0; i < str.length(); ++i){
+        ch = str[i];
+        cout << "\n" << ch << " State " << current_state << endl;
+        if(current_state == q0 && ch == '1'){
+            current_state = q1;
+        }
+        else if(current_state == q1 && ch == '0'){
+            current_state = q0;
+        }
+        else if(current_state == q1 && ch == '1'){
+            current_state = q2;
+        }
+        else if(current_state == q2 && ch == '0'){
+            current_state = q0;
+        }
+        else if(current_state == q2 && ch == '1'){
+            current_state = q3;
+        }
+        else if(current_state == q3 && (ch == '0' || ch == '1')){
+            current_state = q3;
+        }
+    }
+    if(current_state == q3){
+        cout << "\n" << str << " is acceptable" << endl;
+    }
+    else{
+         cout << "\n" << str << " is not acceptable" << endl;
+    }
+    return 0;
+}</code></pre>
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+  </div>
+
+  <!-- Practical 3 -->
+  <div class="practical" id="practical3">
+    <h3>Practical 3</h3>
+    <pre><code>#practical 3
+#include &lt;iostream&gt;
+using namespace std;
+
+int main(){
+    string str;
+    int q0 = 0, q1 = 1, q2 = 2, q3 = 3;
+    int current_state = q0;
+    char ch;
+    cout << "Enter the string\n" << endl;
+    cin >> str;
+    for (int i = 0; i < str.length(); ++i){
+        ch = str[i];
+        cout << "\n" << ch << " State " << current_state << endl;
+        if(current_state == q0 && ch == '1'){
+            current_state = q1;
+        }
+        else if(current_state == q1 && ch == '0'){
+            current_state = q0;
+        }
+        else if(current_state == q1 && ch == '1'){
+            current_state = q2;
+        }
+        else if(current_state == q2 && ch == '0'){
+            current_state = q0;
+        }
+        else if(current_state == q2 && ch == '1'){
+            current_state = q3;
+        }
+        else if(current_state == q3 && (ch == '0' || ch == '1')){
+            current_state = q3;
+        }
+    }
+    if(current_state == q3){
+        cout << "\n" << str << " is acceptable" << endl;
+    }
+    else{
+         cout << "\n" << str << " is not acceptable" << endl;
+    }
+    return 0;
+}</code></pre>
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+  </div>
+
+  <!-- Practical 4 -->
+  <div class="practical" id="practical4">
+    <h3>Practical 4</h3>
+    <pre><code>#practical 4
+#include &lt;iostream&gt;
+using namespace std;
+
+int main(){
+    string str;
+    int q0 = 0, q1 = 1, q2 = 2;
+    int current_state = q0;
+    char ch;
+    cout << "\nEnter the string" << endl;
+    cin >> str;
+    for(int i = 0; i < str.length(); ++i){
+        ch = str[i];
+        if(current_state == q0 && (ch == '0' || ch == '3' || ch == '6' || ch == '9')){
+            current_state = q0;
+        }
+        else if(current_state == q0 && (ch == '1' || ch == '4' || ch == '7')){
+            current_state = q1;
+        }
+        else if(current_state == q0 && (ch == '2' || ch == '5' || ch == '8')){
+            current_state = q2;
+        }
+        else if(current_state == q1 && (ch == '0' || ch == '6' || ch == '9')){
+            current_state = q1;
+        }
+        else if(current_state == q1 && (ch == '1' || ch == '4' || ch == '7')){
+            current_state = q2;
+        }
+        else if(current_state == q0 && (ch == '2' || ch == '5' || ch == '8')){
+            current_state = q0;
+        }
+        else if(current_state == q2 && (ch == '0' || ch == '3' || ch == '6' || ch == '9')){
+            current_state = q2;
+        }
+        else if(current_state == q1 && (ch == '1' || ch == '4' || ch == '7')){
+            current_state = q2;
+        }
+        else if(current_state == q1 && (ch == '2' || ch == '5' || ch == '8')){
+            current_state = q0;
+        }
+        else if(current_state == q2 && (ch == '0' || ch == '3' || ch == '6' || ch == '9')){
+            current_state = q2;
+        }
+        else if(current_state == q2 && (ch == '1' || ch == '4' || ch == '7')){
+            current_state = q0;
+        }
+        else if(current_state == q2 && (ch == '2' || ch == '5' || ch == '8')){
+            current_state = q1;
+        }
+    }
+    if(current_state == q0){
+        cout << "\n" << str << " is acceptable" << endl;
+    }  
+    else{
+        cout << "\n" << str << " is not acceptable" << endl;
+    }
+    return 0;
+}</code></pre>
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+  </div>
+
+  <!-- Practical 5 -->
+  <div class="practical" id="practical5">
+    <h3>Practical 5</h3>
+    <pre><code>#practical 5
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+bool is_one(char c){
+    return c == '1';
+}
+
+bool is_zero(char c){
+    return c == '0';
+}
+
+int main(){
+    string str;
+    int q0 = 0, q1 = 1;
+    int current_state = q0;
+    string output = "";
+    char ch;
+    cout << "\nEnter the string :" << endl;
+    cin >> str;
+    
+    for(int i = 0; i < str.length(); ++i){
+        ch = str[i];
+        if(current_state == q0 && ch == '0'){
+            current_state = q0;
+            output += ch;
+        }
+        else if(current_state == q0 && ch == '1'){
+            current_state = q1;
+            output += ch;
+        }
+        else if(current_state == q1 && ch == '0'){
+            current_state = q0;
+            output += ch;
+        }
+        else if(current_state == q1 && ch == '1'){
+            current_state = q1;
+            output += ch;
+        }
+    }
+    cout << "\nNumber of zeros : " << count_if(output.begin(), output.end(), is_zero) << endl;
+    cout << "Number of ones : " << count_if(output.begin(), output.end(), is_one) << endl;
+    return 0;
+}</code></pre>
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+  </div>
+
+  <!-- Practical 6 -->
+  <div class="practical" id="practical6">
+    <h3>Practical 6</h3>
+    <pre><code>#practical 6
+#include &lt;iostream&gt;
+#include &lt;stack&gt;
+using namespace std;
+
+int main(){
+    string str;
+    char start_element = 'z';
+    int q0 = 0, q1 = 1;
+    int current_state = q0;
+    stack<char> stk;
+    stk.push(start_element);
+    char ch;
+    cout << "\nEnter the string :" << endl;
+    cin >> str;
+    for (int i = 0; i < str.length(); ++i){
+        ch = str[i];
+        if(stk.top() != start_element){    
+            if(stk.top() == ch){
+                stk.push(ch);
+            }
+            else{
+                stk.pop();
+            }
+        }
+        else{
+            stk.push(ch);
+        }
+    }
+    if (stk.top() == start_element){
+        current_state = q1;
+    }
+    if(current_state == q1){
+        cout << "\n" << str << " is acceptable" << endl;
+        cout << stk.top() << endl;
+    }
+    else{
+        cout << "\n" << str << " is not acceptable!!" << endl;
+        cout << stk.top() << endl;
+    }
+    return 0;
+}</code></pre>
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+  </div>
+
+  <!-- Practical 7 -->
+  <div class="practical" id="practical7">
+    <h3>Practical 7</h3>
+    <pre><code>#practical 7
+#include &lt;iostream&gt;
+#include &lt;stack&gt;
+using namespace std;
+
+int main(){
+    string str;
+    bool flag = false;
+    const char start_element = 'z';
+    const char reverser = 'C';
+    int q0 = 0, q1 = 1;
+    int current_state = q0;
+    stack<char> stk;
+    stk.push(start_element);
+    char ch;
+    cout << "\nEnter the string " << endl;
+    cin >> str;
+    
+    for(int i = 0; i < str.length(); ++i){
+        ch = str[i];
+        if(ch == reverser){
+            flag = true;
+            continue;
+        }
+        if(!flag){
+            stk.push(ch);
+        }
+        else{
+            if(ch == stk.top()){
+                stk.pop();
+            }
+            else{
+                break;
+            }
+        }
+    }
+    if(stk.top() == start_element){
+        current_state = q1;
+    }
+    if(current_state == q1){
+        cout << "\n" << str << " is a palindrome" << endl;
+    }
+    else{
+        cout << "\n" << str << " is not a palindrome!!" << endl;
+    }
+    return 0;
+}</code></pre>
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+  </div>
+
+  <!-- Practical 8 -->
+  <div class="practical" id="practical8">
+    <h3>Practical 8</h3>
+    <pre><code>#practical 8
+#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+#include &lt;vector&gt; 
+using namespace std;
+
+vector<string> tokenize(const string &amp;input_string) {
+    vector<string> tokens;
+    stringstream ss(input_string);
+    string token;
+    // Extract words using space as a delimiter
+    while (ss >> token) {
+        tokens.push_back(token);
+    }
+    return tokens;
+}
+
+int main() {
+    string input_string;
+    // Taking input from the user
+    cout << "Enter a string to tokenize: ";
+    getline(cin, input_string);
+    // Tokenizing the input string
+    vector<string> tokens = tokenize(input_string);
+    // Displaying the tokens
+    cout << "Tokens: ";
+    for (const string &amp;token : tokens) {
+        cout << token << " ";
+    }
+    return 0;
+}</code></pre>
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+  </div>
+
+  <!-- Practical 9 -->
+  <div class="practical" id="practical9">
+    <h3>Practical 9</h3>
+    <pre><code>#practical 9
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+#include &lt;unordered_map&gt;
+#include &lt;sstream&gt;
+using namespace std;
+
+// A struct to represent a production rule.
+struct Production {
+    char non_terminal;
+    vector<string> rules; // list of productions for the non-terminal
+};
+
+// A function to generate the regular expression from the given grammar.
+string generateRegex(const unordered_map<char, vector<string>> &grammar, char startSymbol) {
+    stringstream regex;
+    unordered_map<char, string> regex_map;
+    // Handle the start symbol first
+    regex_map[startSymbol] = "";
+    // Iterate through the grammar and build the regular expressions
+    for (const auto &entry : grammar) {
+        char non_terminal = entry.first;
+        const vector<string> &rules = entry.second;
+        string rule_expr;
+        for (const string &rule : rules) {
+            if (rule == "ε") {
+                // Handle epsilon production
+                rule_expr = rule_expr.empty() ? "" : rule_expr + "|";
+                rule_expr += "ε";
+            } else {
+                // Handle terminal and non-terminal production
+                for (char symbol : rule) {
+                    rule_expr += symbol;
+                }
+            }
+        }
+        regex_map[non_terminal] = rule_expr;
+    }
+    // Build the final regular expression string from the start symbol
+    regex << regex_map[startSymbol];
+    return regex.str();
+}
+
+int main() {
+    // Example Grammar
+    // A → aB | ε
+    // B → bA | c
+    unordered_map<char, vector<string>> grammar;
+    grammar['A'] = {"aB", "ε"};
+    grammar['B'] = {"bA", "c"};
+    char startSymbol = 'A';
+    // Generate regular expression from the grammar
+    string regex = generateRegex(grammar, startSymbol);
+    cout << "Generated Regular Expression: " << regex << endl;
+    return 0;
+}</code></pre>
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+  </div>
+
+  <script>
+    function copyCode(button) {
+      // Use textContent to ensure complete code (with proper formatting) is copied
+      let codeBlock = button.previousElementSibling.textContent;
+      navigator.clipboard.writeText(codeBlock).then(() => {
+        alert("Code copied to clipboard!");
+      });
+    }
+  </script>
+</body>
+</html>
